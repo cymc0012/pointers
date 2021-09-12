@@ -1,10 +1,10 @@
 
 all: intptr fcnptr print_char
 
-intptr:
+intptr: intptr.cpp
 	g++ -g intptr.cpp -o intptr 
 
-fcnptr:
+fcnptr: fcnptr.cpp
 	g++ -g fcnptr.cpp -o fcnptr 
 
 print_char:
@@ -15,4 +15,6 @@ exercises:
 
 clean:
 	rm -rf intptr fcnptr print_char *.dSYM 
+
+.PHONY: clean
 
